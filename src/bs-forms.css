@@ -1,0 +1,35 @@
+body{
+    background-image: url(..//public/images/back1.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  form div .icon {
+    position: absolute;
+    padding: 10px;
+  }
+  
+  .success-icon,
+  .fail-icon {
+    right: 0;
+    opacity: 0;
+  }
+  
+  .fail-icon,
+  .error {
+    color: red;
+  }
+  
+  .success-icon {
+    color: green;
+  }
+  
+  .error {
+    font-size: 14.5px;
+    margin-top: 5px;
+  }
+  

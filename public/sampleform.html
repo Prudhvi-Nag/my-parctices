@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+            background-color: aquamarine;
+        }
+        .container{
+            padding: 40px;
+            background-color: beige ;
+        }
+        .text1{
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0px 2opx 0px;
+            display: inline-block;
+            background: wheat;
+        }
+        div{
+            padding: 10px;
+
+        }
+        .registerbtn{
+            background-color: rgb(39, 54, 143);
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            width: 100%;
+            border-radius: 20px;
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        .heading{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <div class="container">
+            <div class="heading">
+            <h1>form using html5 and css3</h1>
+            </div>
+            <br>
+            <label>Frist Name</label>
+            <input type="text" class="text1" name="Frist name" placeholder="Enter Frist Name" required>
+            <label>Last Name</label>
+            <input type="text" class="text1"  name="Last Name" placeholder="Enter Last Name" required>
+            <div>
+                <label>Course :</label>
+                <select>
+                    <option value="Course">Course</option>
+                    <option value="MCA">MCA</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BTech">BTech</option>
+                    <option value="MTech">MTech</option>
+                    <option value="MBA">MBA</option>
+        
+                </select>
+            </div>
+            <div>
+                <label>Gender</label><br>
+                <input type="radio" value="Male" name="Gender" checked>Male
+                <input type="radio" value="Female" name="Gender" >Female
+                <input type="radio" value="Others" name="Gender" >Others
+            </div>
+            <div>
+                <label>Phone Number</label>
+                <input type="text" class="text1"  placeholder="Enter phone number" size="10" required>
+            </div>
+            <label>Address :</label>
+            <textarea class="text1" rows="2" placeholder="enter address" value="Address" required></textarea>
+            <label>Email</label>
+            <input type="email" class="text1" placeholder="*********@gmail.com" name="Email" required>
+            <label>Password</label>
+            <input type="password" class="text1"  placeholder="password must be 8 chars ,one spl char, one number"  required>
+            <div>
+                <button type="submit" class="registerbtn">Register</button>
+            </div>
+    </form>
+    
+</body>
+</html>

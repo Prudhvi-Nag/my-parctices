@@ -1,0 +1,20 @@
+body::before{
+    display: block;
+    content: " ";
+    height: 85px;
+    
+}
+
+
+.dropdown-item:hover{
+background-color: lightgrey;
+}
+.nav-link:hover{
+    background-color: lightgrey;
+}
+#navmenu{
+;
+    height: 650px;
+    overflow: hidden;
+    
+}

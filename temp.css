@@ -1,0 +1,339 @@
+
+header{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.brand-name{
+    font-size: 26px;
+    font-weight: bold;
+    font-family: arial;
+}
+
+.menu-items span{
+    margin-right: 20px;
+    font-size:20px ;
+    font-family: arial;
+    font-weight: bold;
+}   
+.icons span{
+    margin-right: 10px;
+    font-size: 20px;
+    font-family: arial;
+}     
+article{
+    font-size: 20px;
+    font-family: arial;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.women {
+    background-image: url("public/images/p1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.men {
+    background-image: url("public/images/p2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kids {
+    background-image: url("public/images/p3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 160px;
+    background-color: white;
+    color:black;
+    font-size: 15pxpx;
+    font-weight: bold;
+    font-family: Arial;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 60px;
+    color:white;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+.highlights {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    font-family: Arial;
+    padding: 10px;
+}
+.highlights span {
+    color: red;
+}
+
+h4 {
+    color:black;
+}
+.middle-text1{
+    text-align: center;
+    color: gray;
+    font-family: arial;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.middle-text2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: arial;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+.middle-text3{
+    text-align: center;
+    font-family: arial;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+
+}
+.section1{
+    display: grid;
+    grid-template-columns:3fr 6fr ;
+    
+}
+.bag-collection{
+    background-image: url(public/images/bagcollection.jpg);
+    
+    height: 400px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    margin-left: 50px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    
+   
+    
+}
+.printed-shirt{
+    background-image: url(public/images/printedmens.jpg);
+    
+    height: 400px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    
+}
+.section2{
+    display: flex;
+    grid-template-columns: 8fr 3fr;
+}
+.basicdress{
+    background-image: url(public/images/women.jpg);
+    
+    height: 400px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: white;
+
+
+}
+.sweatshirt{
+    background-image: url(public/images/sweatshirt.jpg);
+    
+    height: 400px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 50px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.top{
+    font-size: 35px;
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.menu{
+    
+    font-size:15px ;
+    font-family: arial;
+    color: black;
+    padding: 15px;
+    display: flex;
+    margin-left: 550px;
+    margin-right: 550px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+    
+    
+    
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+.product-section1{
+    display: flex;
+    margin: 30px;
+}
+.product-section2{
+    display: flex;
+    margin: 30px;
+}
+
+.discover{
+    font-size: 20px;
+    font-family: arial;
+    text-align: center;
+}
+
+.sandel{
+    background-image: url(public/images/sandel2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px ;
+    text-align: center;
+    font-family: arial;
+    
+}
+.reviwe{
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.rating{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.rate1{
+    border: 2px solid black; 
+    text-align: center;
+    padding: 15px;
+    font-family: arial;
+
+}
+.bi bi-star~ div{
+    color: goldenrod;
+}
+.last{
+    font-family: arial;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    
+    background-color: gainsboro;
+}
+.lastimage{
+    margin-top: 30px;
+    display: flex;
+    padding: 5px;
+}
+footer{
+    display: grid;
+    grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: arial;
+}
+.left-panel{
+    
+    padding: 5px;
+}
+.beside-left-panel{
+    
+    padding: 5px;
+}
+.middle-panel{
+    
+    padding: 5px;
+}
+.beside-right-panel{
+    
+    padding: 5px;
+}
+.right-panel{
+    
+    padding: 5px;
+}
+.title{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+ 

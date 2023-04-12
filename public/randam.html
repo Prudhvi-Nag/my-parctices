@@ -1,0 +1,121 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        
+        
+        
+
+
+       
+
+
+
+        function rand() {
+            let x=Math.round(Math.random()*9999);
+           document.getElementById("demo").innerHTML=x;
+           // document.write(x);
+        }
+    </script>
+</head>
+<body>
+    <p id="demo"></p>
+    <button type="button" onclick="rand()">genarate</button>
+
+
+
+
+    
+   
+</body>
+</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function random() {
+
+            let range = {min: 1000, max: 9999};
+            let val = range.max - range.min;
+
+        const rand = Math.round(range.min + Math.random() * val);
+        document.getElementById("num").innerHTML= rand;
+
+        }
+        
+
+//document.write(rand)
+    </script>
+</head>
+<body>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">TIME</button>
+
+    <p id="demo"></p>
+
+    <br>
+    <br>
+    <br>
+
+   <b><p id="num"></p></b> 
+    
+    <button  type="button" onclick="random()" >genarate</button>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

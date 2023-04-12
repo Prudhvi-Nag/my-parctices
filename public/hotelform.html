@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Registration Form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        #header {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px;
+            font-size: 40px;
+        }
+
+        body {
+            background-color: rgb(233, 214, 214);
+            color: black;
+        }
+    </style>
+    <script>
+
+        function register() {
+            document.getElementById("lblName").innerHTML = document.getElementById("cstName").value;
+            document.getElementById("lblDate").innerHTML = document.getElementById("chkDate").value;
+            document.getElementById("lblDays").innerHTML = document.getElementById("day").value;
+            document.getElementById("lblPerson").innerHTML = document.getElementById("person").value;
+
+            var roomName = "";
+            var roomCost = 0;
+            var amenitiesName = "";
+            var amenitiesCost = 0;
+            var days = 0;
+            var person = 0;
+            var advanceAmount = 0;
+
+            var extraPerson = 0;
+
+            delRadio = document.getElementById("delroom")
+            suiRadio = document.getElementById("suiroom")
+
+            if (delRadio.checked) {
+                roomName = delRadio.value;
+                roomCost = 2500;
+            }
+            if (suiRadio.checked) {
+                roomName = suiRadio.value;
+                roomCost = 4000;
+            }
+
+            acCheckBox = document.getElementById("ac")
+            lockerCheckBox = document.getElementById("locker")
+
+            if (acCheckBox.checked) {
+                amenitiesName += acCheckBox.value + "<br>";
+                amenitiesCost = 1000;
+                roomCost = roomCost + amenitiesCost;
+            }
+            if (lockerCheckBox.checked) {
+                amenitiesName += lockerCheckBox.value + "<br>";
+                amenitiesCost = 300;
+                roomCost = roomCost + amenitiesCost;
+            }
+
+            days = document.getElementById("day").value;
+            person = document.getElementById("person").value;
+
+            if (days == 1 && person == 2) {
+                roomCost += 0;
+            }
+            else if (days == 1 && person > 2) {
+                extraPerson = person - 2;
+                roomCost = roomCost + (extraPerson * 1000);
+            }
+
+            else if (days > 1 && person > 2) {
+                extraPerson = person - 2;
+                roomCost = (roomCost * days) + (extraPerson * 1000);
+            }
+            advanceAmount = document.getElementById("adveAmount").value;
+            roomCost = roomCost - advanceAmount;
+
+            document.getElementById("lblType").innerHTML = roomName;
+            document.getElementById("lblAme").innerHTML = amenitiesName;
+            document.getElementById("lbladv").innerHTML = advanceAmount;
+            document.getElementById("lblTotal").innerHTML = "&#8377;" + roomCost;
+        }
+        function verifyAmount() {
+            var amount = document.getElementById("adveAmount").value;
+            var amount1 = document.getElementById("payError");
+            if (isNaN(amount)) {
+                amount1.innerHTML = "Invalid amount.. Please enter valid amount..";
+            }
+            else {
+                amount1.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <p id="header" class="d-flex justify-content-center align-items-center ">Hotel Registration Form</p>
+    </header>
+    <section>
+        <div class="accordion" id="orderForm">
+            <!--Customer Info-->
+            <div class="=accordion-item">
+                <div class="accordion-header">
+                    <button class="btn btn-danger w-100" data-bs-target="#customer" data-bs-toggle="collapse">Customer
+                        Info</button>
+                </div>
+                <div class="accordion-collapse collapse show " id="customer" data-bs-parent="#orderForm">
+                    <div class="accordion-body">
+                        <dl>
+                            <dt>Customer Name</dt>
+                            <dd><input type="text" id="cstName" class="form-control"></dd>
+                            <dt>Check in Date</dt>
+                            <dd><input type="date" id="chkDate" class="form-control"></dd>
+                            <dt>Total No. of Days</dt>
+                            <dd><input type="number" id="day" class="form-control"></dd>
+                            <dt>Total No. Of Persons</dt>
+                            <dd><input type="number" id="person" class="form-control"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!--Select Room Type-->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="btn btn-danger w-100" data-bs-target="#roomtype" data-bs-toggle="collapse">Select
+                        Room Type</button>
+                </div>
+                <div class="accordion-collapse collapse" id="roomtype" data-bs-parent="#orderForm">
+                    <div class="accordion-body">
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/deluxeroom.jpg" class="card-image-top" height="200">
+                                    <div class="card-header">
+                                        <h2>Deluxe Room</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3><input type="radio" id="delroom" class="form-check-input"
+                                                value="Deluxe Room" name="room"> &#8377;2500/-
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/suitroom.jpg" class="card-image-top" height="200">
+                                    <div class="card-header">
+                                        <h2>Suite Room</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3><input type="radio" id="suiroom" class="form-check-input" value="Suite Room"
+                                                name="room"> &#8377;4000/-
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Select Amenities-->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="btn btn-danger w-100" data-bs-target="#amenities" data-bs-toggle="collapse">Select
+                        Amenities</button>
+                </div>
+                <div class="accodion-collapse collapse" id="amenities" data-bs-parent="#orderForm">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/ac.jpg" class="card-image-top" height="200">
+                                    <div class="card-header">
+                                        <h2>A/C</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3><input type="checkbox" id="ac" value="A/C"
+                                                class="form-check-input">&#8377;1000</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/locker.jpg" class="card-image-top" height="200">
+                                    <div class="card-header">
+                                        <h2>Locker</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3><input type="checkbox" id="locker" value="Locker"
+                                                class="form-check-input">&#8377;300</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accodion-header">
+                    <button class="btn btn-danger w-100 " data-bs-target="#advAmount" data-bs-toggle="collapse">Advance
+                        Amount</button>
+                </div>
+                <div class="accodion-collapse collapse" id="advAmount" data-bs-parent="#orderForm">
+                    <div class="accordion-body">
+                        <dl>
+                            <dt>Advance Amount</dt>
+                            <dd><input type="text" id="adveAmount" class="form-control w-25" onkeyup="verifyAmount()">
+                            </dd>
+                            <dd id="payError" class="text-danger"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button data-bs-target="#bill" data-bs-toggle="modal" class="btn btn-danger w-100"
+            onclick="register()">Register</button>
+        <div class="modal fade" id="bill">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-primary">
+                        <h2>Your Bill Summary</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        <dl class="row">
+                            <dt class="col-7">Customer Name</dt>
+                            <dd class="col-5" id="lblName"></dd>
+                            <dt class="col-7">Check in Dates</dt>
+                            <dd class="col-5" id="lblDate"></dd>
+                            <dt class="col-7">Total No. Of Days</dt>
+                            <dd class="col-5" id="lblDays"></dd>
+                            <dt class="col-7">Total No. Of Persons</dt>
+                            <dd class="col-5" id="lblPerson"></dd>
+                            <dt class="col-7">Room Type</dt>
+                            <dd class="col-5" id="lblType"></dd>
+                            <dt class="col-7">Amenities</dt>
+                            <dd class="col-5" id="lblAme"></dd>
+                            <dt class="col-7">Advance Amount</dt>
+                            <dd class="col-5" id="lbladv"></dd>
+                            <dt class="col-7">Balance Amount</dt>
+                            <dd class="col-5" id="lblTotal"></dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-bs-dismiss="modal" class="btn btn-primary">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

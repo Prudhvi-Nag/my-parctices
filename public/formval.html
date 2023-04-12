@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <h3>Fill out the below-given form and click the reset button to see the working of the reset() function in JavaScript.</h3>
+   <form id=" form_id ">
+      Student Name <br>
+      <input type="text" name="sname"> <br>
+
+      Student Subject <br>
+      <input type = "password" name = "ssubject" > <br>
+
+      Student Roll Number <br>
+      <input type = "roll_no" name = "roll_number" > <br>
+      <input type = "button" onclick = "newFunction()" value = "Reset" >
+   </form>
+   <script>
+      function newFunction(){
+        var element = document.getElementById(" form_id ");
+         element.reset()
+      }
+   </script>
+</body>
+</html>

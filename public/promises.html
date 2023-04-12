@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROMISES JS</title>
+  </head>
+  <body>
+    <!--    **  **  **  ** example 1  **  **  **  **  **  **   -->
+    <!-- <script>
+        let x = new Promise((resolve, reject) =>{
+            let a = 1 + 1;
+            if(a == 3){
+                resolve("success");
+            }
+            else{
+                reject("fail");
+            }
+        })
+
+
+        x.then((message) => {
+          console.log("this is in the then    => "  + message);
+
+        }).catch((message) => {
+            console.log(" this the is in the catch  =>" + message);
+
+        })
+    </script> -->
+    <!-- ** **   **  **  ** example 2 **  **  **  **  **  **   -->
+    <!-- <script>
+function a(value, error) {
+    return new Promise((resolve, reject) => {
+        if(!error) {
+            resolve(value + 10);
+        }
+        else{
+            reject("something went worng");
+        }
+    });
+}
+
+    function b(value, error) {
+    return new Promise((resolve, reject) => {
+        if(!error) {
+            resolve(value + 10);
+        }
+        else{
+            reject("something went worng");
+        }
+    
+    });
+}
+
+    function c(value, error) {
+    return new Promise((resolve, reject) => {
+        if(!error) {
+            resolve(value + 10);
+        }
+        else{
+            reject("something went worng");
+        }
+    });    
+}
+
+
+a(50, false).then((d1) => b(d1, false))
+            .then((d2) => c(d2, false))
+            .then((d3) => console.log(d3))
+            .catch((error)  => console.log(error));
+
+    </script> -->
+
+    <script>
+        const p1 = Promise.resolve(" i am a promises");
+     const p2 = 7732093495;
+     const p3 = new Promise((resolve, reject) => {
+       setTimeout(resolve, 1000, "sjnfnjfjdjd");
+     });
+     //const p4 = Promise.reject("rejected");
+
+     //Promise.all([p2, p3]).then((values) => {console.log(values)});
+      //Promise.allSettled([p1,p2,p3,p4]).then((values) => console.log(values));
+      //Promise.any([p2,p1,p3,p4]).then((values) => console.log(values));
+     Promise.race([p2,p1,p3]).then((values) => console.log(values));
+   </script>
+     
+   
+  </body>
+</html>

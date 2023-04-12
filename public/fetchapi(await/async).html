@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch-api using async/await</title>
+</head>
+<body>
+    <button type="button" class="btn">fetch-api</button>
+
+    <script>
+        // **   **  **  **  **  *** **  **  **  **  **  **  **  
+// **   **  **  **  fetch api's using async/await** **  
+// **   **  **  **  **  **  **  **  **  **  **  **  **  
+const btn = document.querySelector(".btn");
+        const clickhandel = async () => {
+            try {
+                const res = await fetch("https://jsonplaceholder.typicode.com/users");
+                const data = await res.json();
+
+                if(!res.ok){
+                    console.log("something gone wrong ");
+                    return;
+                }
+                console.log(data);
+                // console.log(data[2].name);
+                // console.log(data.map(data => data.id));
+            }
+            catch(error){
+                console.log(error);
+                
+            }
+        }
+        
+        btn.addEventListener("click", clickhandel);
+        
+
+    </script>
+    
+</body>
+</html>
